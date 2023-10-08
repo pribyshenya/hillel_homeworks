@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Домашня робота №6</title>
+  </head>
+  <body>
+    <script>
+      // Знайти суму всіх цілих чисел від 1 до 15:
+      let sum = 0;
+      for (let i = 1; i <= 15; i++) {
+        sum += i;
+      }
+      console.log(`Сума всіх цілих чисел від 1 до 15 = ${sum}`);
+
+      // Знайти добуток усіх цілих чисел від 15 до 35:
+      let product = 1;
+      for (let i = 15; i <= 35; i++) {
+        product *= i;
+      }
+      console.log(`Добуток усіх цілих чисел від 15 до 35 = ${product}`);
+
+      // Знайти середнє арифметичне всіх цілих чисел від 1 до 500:
+      let number = 0;
+      for (let i = 1; i <= 500; i++) {
+        number += i;
+      }
+      let average = number / 500;
+      console.log(
+        `Середнє арифметичне всіх цілих чисел від 1 до 500 = ${average}`
+      );
+
+      // Вивести суму лише парних чисел у діапазоні від 30 до 80:
+      let doubles = 0;
+      for (let i = 30; i <= 80; i++) {
+        if (i % 2 === 0) {
+          doubles += i;
+        }
+      }
+      console.log("Сума лише парних чисел від 30 до 80: " + doubles);
+
+      // Вивести на консоль таблицю Піфагора з використанням циклів:
+      for (let i = 1; i <= 10; i++) {
+        let row = "";
+        for (let j = 1; j <= 10; j++) {
+          let result = i * j;
+          row += result + "\t";
+        }
+        console.log(row);
+      }
+    </script>
+  </body>
+</html>

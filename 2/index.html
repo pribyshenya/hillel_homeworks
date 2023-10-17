@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Домашня робота №2</title>
+  </head>
+  <body>
+    <script>
+      //  1) Розкласти за цифрами п'ятизначне число і вивести у вихідному порядку через пробіл
+      let number = 10369;
+      let string = number.toString().split("");
+      let result = string.join(" ");
+      console.log(result);
+
+      // 2) Створити скрипт для складання, віднімання, множення та поділу двох чисел та виведення результатів.
+
+      function calcNumbers() {
+        let num1 = parseFloat(prompt("Введіть перше число:"));
+        let num2 = parseFloat(prompt("Введіть друге число:"));
+
+        let sum = num1 + num2;
+        let difference = num1 - num2;
+        let product = num1 * num2;
+        let quotient = num1 / num2;
+
+        console.log(`Сума: ${sum}`);
+        console.log(`Різниця: ${difference}`);
+        console.log(`Добуток: ${product}`);
+        console.log(`Частка: ${quotient}`);
+      }
+
+      calcNumbers();
+
+      // 3*) Зробити функцію, яка викликатиме діалогове вікно (prompt) для введення імені. Завжди робити першу букву великої та виводити її в новому повідомленні (alert).
+
+      function getFormattedName() {
+        let name = prompt("Будь ласка, введіть своє ім'я:");
+        let formattedName = name.charAt(0).toUpperCase() + name.slice(1);
+        alert(`Ваше ім'я: ${formattedName}`);
+      }
+
+      getFormattedName();
+    </script>
+  </body>
+</html>

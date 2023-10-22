@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Домашня робота №8</title>
+  </head>
+  <body>
+    <script>
+      // Доробити об'єкт ladder (сходи) – об'єкт, який дозволяє підніматися вгору, спускатися та отримувати сходинку:
+      let ladder = {
+        step: 0,
+        up: function () {
+          this.step++;
+          return this;
+        },
+        down: function () {
+          this.step--;
+          return this;
+        },
+        showStep: function () {
+          console.log(this.step);
+          return this;
+        },
+      };
+      // Приклад:
+      ladder.up().showStep();
+      ladder.down().showStep();
+      ladder.up().up().up().down().showStep();
+    </script>
+  </body>
+</html>

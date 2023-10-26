@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Домашня робота №9</title>
+  </head>
+  <body>
+    <script>
+      // Конструктор для Людини
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+
+        // Виведення даних людини
+        this.displayInfo = function () {
+          console.log(`Ім'я: ${this.name}, Вік: ${this.age}`);
+        };
+      }
+
+      // Конструктор для Автомобіля
+      function Car(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.owner = null;
+
+        // Виведення даних про автомобіль
+        this.displayInfo = function () {
+          console.log(
+            `Марка: ${this.make}, Модель: ${this.model}, Рік: ${this.year}`
+          );
+        };
+
+        // Присвоєння власника автомобілю
+        this.carOwner = function (person) {
+          this.owner = person;
+        };
+      }
+
+      // Отримуємо дані про людину
+      let personName = prompt("Введіть ім'я людини:");
+      let personAge = prompt("Введіть вік людини:");
+
+      // Створюємо об'єкт людини
+      let person = new Person(personName, personAge);
+
+      // Виводимо дані про людину
+      person.displayInfo();
+
+      // Отримуємо дані про автомобіль
+      let carMake = prompt("Введіть марку автомобіля:");
+      let carModel = prompt("Введіть модель автомобіля:");
+      let carYear = prompt("Введіть рік виготовлення автомобіля:");
+
+      // Створюємо об'єкт автомобіля
+      let car = new Car(carMake, carModel, carYear);
+
+      // Виводимо дані про автомобіль
+      car.displayInfo();
+
+      // Присвоюємо автомобілю власника
+      car.carOwner(person);
+
+      // Виводимо інформацію про власника автомобіля
+      console.log("Власник автомобіля:");
+      car.owner.displayInfo();
+    </script>
+  </body>
+</html>

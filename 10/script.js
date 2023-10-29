@@ -1,4 +1,3 @@
-// Зміна кольору тексту
 let textElement = document.getElementById("text");
 let colorChangeButton = document.getElementById("color-change-button");
 let isTextColorChanged = false;

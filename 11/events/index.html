@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Використання подій</title>
+  </head>
+  <body>
+    <div id="buttonContainer">
+      <button id="button1">Кнопка 1</button>
+      <button id="button2">Кнопка 2</button>
+      <button id="button3">Кнопка 3</button>
+    </div>
+
+    <script>
+      let buttonContainer = document.getElementById("buttonContainer");
+
+      buttonContainer.addEventListener("click", function (event) {
+        if (event.target && event.target.nodeName == "BUTTON") {
+          let buttonText = event.target.textContent;
+
+          alert("Клікнуто кнопку " + buttonText);
+        }
+      });
+    </script>
+  </body>
+</html>

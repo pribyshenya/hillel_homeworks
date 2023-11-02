@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Перехід на сторінку</title>
+  </head>
+  <body>
+    <button id="inputButton">Ввести посилання</button>
+    <button id="redirectButton">Перейти на сайт</button>
+
+    <script>
+      document
+        .getElementById("inputButton")
+        .addEventListener("click", function () {
+          let link = prompt("Будь ласка, введіть посилання");
+          if (link) {
+            localStorage.setItem("savedLink", link);
+          }
+        });
+
+      document
+        .getElementById("redirectButton")
+        .addEventListener("click", function () {
+          let storedLink = localStorage.getItem("savedLink");
+          if (storedLink) {
+            window.location.href = storedLink;
+          } else {
+            alert("Ви не ввели посилання.");
+          }
+        });
+    </script>
+  </body>
+</html>
